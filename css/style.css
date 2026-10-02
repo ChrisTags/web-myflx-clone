@@ -1,0 +1,524 @@
+/* =============================================
+   BASE
+   ============================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  border-bottom: 2px solid transparent;
+}
+
+p {
+  color: #737373;
+}
+
+/* =============================================
+   PAGES
+   ============================================= */
+
+.page__home {
+  background: url(../assets/img/background.jpg) center/cover;
+}
+
+.page__profil,
+.page__films {
+  background: #141414;
+}
+
+/* =============================================
+   NAVIGATION
+   ============================================= */
+
+.nav {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.nav__logo {
+  width: 150px;
+}
+
+.nav__link:has(.nav__logo):hover {
+  border-bottom-color: transparent;
+}
+
+.nav__bar {
+  display: flex;
+  align-items: center;
+}
+
+.nav__link {
+  margin-left: 10px;
+  font-weight: 400;
+  transition: all 0.3s;
+}
+
+.nav__link:hover {
+  border-bottom: 2px solid #fff;
+}
+
+.page__films .nav {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+
+/* =============================================
+   LAYOUT
+   ============================================= */
+
+.content {
+  margin: 0 10%;
+  margin-top: 150px;
+}
+
+.page__films .content {
+  margin-top: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.row--space-between {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.page__films .row {
+  margin-top: 10px;
+}
+
+.row__col {
+  width: 100%;
+}
+
+/* =============================================
+   PROFILS
+   ============================================= */
+
+.profil {
+  text-align: center;
+}
+
+.profil__link {
+  display: block;
+}
+
+.profil__image {
+  border: 2px solid transparent;
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.profil__label {
+  transition: all 0.3s;
+}
+
+.profil:hover .profil__image {
+  border: 2px solid #fff;
+}
+
+.profil:hover .profil__label {
+  color: #fff;
+}
+
+/* =============================================
+   BUTTONS
+   ============================================= */
+
+.btn {
+  display: inline-block;
+  text-transform: uppercase;
+  border: 1px solid #808080;
+  padding: 0.5em 1.5em;
+  color: #808080;
+  margin-top: 50px;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.button {
+  background: rgba(51, 51, 51, 0.8);
+  border: none;
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.button i {
+  margin-right: 5px;
+}
+
+.button:hover {
+  background: rgba(51, 51, 51, 1);
+  cursor: pointer;
+}
+
+/* =============================================
+   VIDEO
+   ============================================= */
+
+.video {
+  height: 600px;
+  overflow: hidden;
+}
+
+.video__player {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =============================================
+   TYPOGRAPHY
+   ============================================= */
+
+.title {
+  color: #fff;
+  font-size: 3rem;
+}
+
+.subtitle {
+  color: #fff;
+  font-size: 2rem;
+}
+
+/* =============================================
+   FORM
+   ============================================= */
+
+.form {
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.form__input {
+  padding: 16px 20px;
+  margin: 5px 0;
+  border: none;
+  background: #333;
+  font-size: 1rem;
+  color: #fff;
+  border-radius: 4px;
+  opacity: 0.8;
+  outline: none;
+  transition:
+    opacity 0.2s,
+    background 0.2s;
+}
+
+.form__input--submit {
+  background: rgb(211, 8, 18);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.form__input--submit:hover {
+  cursor: pointer;
+  background: rgb(173, 7, 15);
+}
+
+.form__input[type="email"]:focus,
+.form__input[type="password"]:focus,
+.form__input[type="email"]:hover,
+.form__input[type="password"]:hover {
+  opacity: 1;
+  background: rgb(34, 34, 34);
+}
+
+.form__label {
+  color: #fff;
+  margin-left: 10px;
+}
+
+.form__text {
+  color: #737373;
+}
+
+.form__link {
+  color: #fff;
+}
+
+/* =============================================
+   UTILS
+   ============================================= */
+
+.pl-5 {
+  padding-left: 50px;
+}
+
+/* =============================================
+   RESPONSIVE – GÉNÉRAL
+   ============================================= */
+
+@media (min-width: 1025px) {
+  .content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1400px;
+  }
+
+  .page__films .content {
+    margin-top: 10px;
+  }
+
+  .video {
+    width: 100%;
+    max-width: 100%;
+    height: 600px;
+    overflow: hidden;
+  }
+
+  .video__player {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .page__films .row--space-between {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .page__films .row--space-between img {
+    width: calc(25% - 10px);
+    object-fit: cover;
+  }
+
+  .page__films .row {
+    justify-content: center;
+  }
+
+  .page__films .row .row__col {
+    width: 100%;
+  }
+
+  .page__films .subtitle {
+    font-size: 2rem;
+  }
+
+  .page__films .pl-5 {
+    padding-left: 50px;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .content {
+    margin: 0 5%;
+    margin-top: 120px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    min-height: 70px;
+  }
+
+  .nav__logo {
+    width: 120px;
+  }
+
+  .nav__bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .content {
+    margin: 0 5%;
+    margin-top: 100px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .form {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .video {
+    height: 40vh;
+  }
+
+  .row--space-between {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .profil {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+
+  .pl-5 {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    min-height: 60px;
+  }
+
+  .nav__logo {
+    width: 100px;
+  }
+
+  .content {
+    margin: 0 15px;
+    margin-top: 80px;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .form {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .form__input {
+    font-size: 0.95rem;
+    padding: 12px 15px;
+  }
+
+  .button {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+  }
+
+  .profil {
+    width: 45%;
+  }
+
+  .video {
+    height: 35vh;
+  }
+
+  .row__col {
+    width: 100%;
+  }
+}
+
+/* =============================================
+   RESPONSIVE – FILMS PAGE
+   ============================================= */
+
+@media (max-width: 1200px) {
+  .page__films .content {
+    margin-top: 80px;
+  }
+
+  .page__films .video {
+    height: 500px;
+  }
+
+  .page__films .row--space-between img {
+    width: calc(25% - 10px);
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 1024px) {
+  .page__films .content {
+    margin-top: 70px;
+  }
+
+  .page__films .video {
+    height: 450px;
+  }
+
+  .page__films .row--space-between img {
+    width: calc(25% - 8px);
+  }
+}
+
+@media (max-width: 768px) {
+  .page__films .content {
+    margin-top: 60px;
+  }
+
+  .page__films .video {
+    height: 40vh;
+  }
+
+  .page__films .row--space-between img {
+    width: calc(50% - 5px);
+  }
+
+  .page__films .row {
+    flex-wrap: wrap;
+  }
+
+  .page__films .row .row__col {
+    width: 100%;
+  }
+
+  .page__films .pl-5 {
+    padding-left: 0;
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page__films .content {
+    margin-top: 40px;
+  }
+
+  .page__films .video {
+    height: 35vh;
+  }
+
+  .page__films .row--space-between img {
+    width: 100%;
+  }
+
+  .page__films .subtitle {
+    font-size: 1.3rem;
+  }
+
+  .page__films .button {
+    font-size: 0.85rem;
+    padding: 10px 14px;
+  }
+}
